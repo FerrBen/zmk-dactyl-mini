@@ -1,0 +1,2 @@
+osource "/Users/ferro/keyboards/zmk-dactyl-mini/zmk/app/boards/shields/*/Kconfig.defconfig"
+osource "/Users/ferro/keyboards/zmk-dactyl-mini/config/boards/shields/*/Kconfig.defconfig"
