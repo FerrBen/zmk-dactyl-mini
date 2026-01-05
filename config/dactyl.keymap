@@ -11,6 +11,12 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mt {
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <150>;
+    flavor = "balanced";
+};
+
 / {
     macros {
         tmux_n1: tmux_n1 {
