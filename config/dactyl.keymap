@@ -83,11 +83,25 @@
             label = "TMUX_ZOOM";
         };
 
-        esc_and_j: esc_and_j {
+        ae: ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "ESC_AND_J";
+            bindings = <&kp LA(U) &kp A>;
+            label = "AE";
+        };
+
+        oe: oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp O>;
+            label = "OE";
+        };
+
+        ue: ue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp U>;
+            label = "UE";
         };
     };
 
@@ -110,7 +124,7 @@
 &kp LS(N1)    &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)        &kp LS(N8)     &kp LS(N9)      &kp LS(N0)
 &kp NUMBER_1  &kp N2      &kp N3      &kp N4      &kp N5      &kp MINUS      &kp EQUAL         &kp GRAVE      &kp LEFT_BRACE  &kp RIGHT_BRACE
 &kp N6        &kp N7      &kp N8      &kp N9      &kp N0      &kp LS(MINUS)  &kp LS(EQUAL)     &kp LS(GRAVE)  &kp LBKT        &kp RBKT
-                          &mo 0       &trans                                 &sk LS(LEFT_ALT)  &sk LEFT_ALT
+                          &trans      &trans                                 &sk LS(LEFT_ALT)  &sk LEFT_ALT
                           &trans      &trans      &trans      &trans         &trans            &trans
                                       &trans      &trans      &trans         &trans
             >;
@@ -118,7 +132,7 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &kp LS(LG(NUMBER_4))  &trans                     &trans                    &trans     &trans
+&ae     &oe     &ue     &trans  &trans  &kp LS(LG(NUMBER_4))  &trans                     &trans                    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &kp LEFT              &kp DOWN                   &kp UP_ARROW              &kp RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                &kp LS(LG(RIGHT_BRACKET))  &kp LS(LG(LEFT_BRACKET))  &trans     &trans
                 &trans  &trans                                &trans                     &trans
